@@ -5,16 +5,18 @@
 package umg.edu.gt.progra1.programacion;
 
 import java.util.Scanner;
+import static umg.edu.gt.progra1.programacion.ejercicios.Formulas.formulaCuadratica;
 import umg.edu.gt.progra1.programacion.estructuraDeControl.IfElseExample;
 import umg.edu.gt.progra1.programacion.estructuraDeControl.LoopExample;
 import umg.edu.gt.progra1.programacion.estructuraDeControl.SwitchCaseExample;
+import umg.edu.gt.progra1.programacion.ejercicios.Formulas;
 
 
 public class Programacion {
 
     public static void main(String[] args) {
         System.out.println("Hola bienvenido a Progra 1");
-        testSwitch();
+        numeroVampiro();
     }
     
     
@@ -85,5 +87,38 @@ public class Programacion {
         
         
         switchEx.OperacionesSwitch(n1, n2, op);
+    }
+    
+    public static void formulaCuadratica() {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ejercicio: Fórmula Cuadrática");
+        System.out.println("Ingrese el valor de a:");
+        double a = scanner.nextDouble();
+
+        System.out.println("Ingrese el valor de b:");
+        double b = scanner.nextDouble();
+
+        System.out.println("Ingrese el valor de c:");
+        double c = scanner.nextDouble();
+
+        System.out.println("Resultado:");
+        Formulas.formulaCuadratica(a, b, c);
+    }
+    
+    public static void numeroPalindromo(){
+        System.out.println("\n----- Número Palíndromo -----");
+        System.out.println("¿12321 es palíndromo? " + Formulas.esNumeroPalindromo(12321));
+
+    }
+    
+    public static void palabraPalindroma(){
+       System.out.println("\n----- Palabra Palíndromo -----");
+       System.out.println("¿'Anita lava la tina' es palíndromo? " + Formulas.esPalabraPalindromo("Anita lava la tina"));
+    }
+    
+    public static void numeroVampiro(){
+        System.out.println("\n----- Número Vampiro -----");
+        Formulas.encontrarVampiro(1000, 9999);
     }
 }
