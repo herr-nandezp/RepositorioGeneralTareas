@@ -10,13 +10,14 @@ import umg.edu.gt.progra1.programacion.estructuraDeControl.IfElseExample;
 import umg.edu.gt.progra1.programacion.estructuraDeControl.LoopExample;
 import umg.edu.gt.progra1.programacion.estructuraDeControl.SwitchCaseExample;
 import umg.edu.gt.progra1.programacion.ejercicios.Formulas;
+import umg.edu.gt.progra1.programacion.ejercicios.Vectores;
 
 
 public class Programacion {
 
     public static void main(String[] args) {
         System.out.println("Hola bienvenido a Progra 1");
-        numeroVampiro();
+        secuenciaLarga();
     }
     
     
@@ -120,5 +121,100 @@ public class Programacion {
     public static void numeroVampiro(){
         System.out.println("\n----- Número Vampiro -----");
         Formulas.encontrarVampiro(1000, 9999);
+    }
+    
+    public static void encontrarSuma (){
+        Scanner scanner = new Scanner(System.in);
+        Vectores vectores = new Vectores ();
+        
+        System.out.print ("Ingrese el tamanio del arreglo: ");
+        int n = scanner.nextInt();
+        
+        int[] arreglo = new int[n];
+        
+        System.out.print ("Ingrese los numeros para el arreglo: ");
+        for (int i = 0; i < n; i++){
+            arreglo[i] = scanner.nextInt();
+        }
+        
+        vectores.encontrarSuma (arreglo, n);
+    
+    }
+    
+    public static void paresImpares(){
+        Scanner scanner = new Scanner(System.in);
+        Vectores vectores = new Vectores ();
+        
+        System.out.print ("Ingrese el tamanio del arreglo: ");
+        int n = scanner.nextInt();
+        
+        int[] arreglo = new int[n];
+        
+        System.out.print ("Ingrese los numeros para el arreglo: ");
+        for (int i = 0; i < n; i++){
+            arreglo[i] = scanner.nextInt();
+        }
+        
+        vectores.ordenarParesImpares(arreglo,n);
+    }
+    
+    public static void dosNumeros (){
+        Scanner scanner = new Scanner(System.in);
+        Vectores vectores = new Vectores ();
+        
+        System.out.print ("Ingrese el tamanio del arreglo: ");
+        int n = scanner.nextInt();
+        
+        int[] arreglo = new int[n];
+        
+        System.out.print ("Ingrese los numeros para el arreglo: ");
+        for (int i = 0; i < n; i++){
+            arreglo[i] = scanner.nextInt();
+        }
+        
+        System.out.print ("Ingrese los numeros para el arreglo: ");
+        int x = scanner.nextInt();
+        
+        vectores.encontrarDosNumeros(arreglo, n, x);
+                
+    }
+    
+    public static void circularVector (){
+        Scanner scanner = new Scanner(System.in);
+        Vectores vectores = new Vectores ();
+        
+        System.out.print ("Ingrese el tamanio del arreglo: ");
+        int n = scanner.nextInt();
+        
+        int[] arreglo = new int[n];
+        
+        System.out.print ("Ingrese los numeros para el arreglo: ");
+        for (int i = 0; i < n; i++){
+            arreglo[i] = scanner.nextInt();
+        }
+        
+        System.out.print ("Cuantas veces desea rotar el arreglo: ");
+        int k = scanner.nextInt();
+        
+        vectores.circularVector(arreglo, n, k);
+                
+    }
+    
+    public static void secuenciaLarga (){
+        Scanner scanner = new Scanner(System.in);
+        Vectores vectores = new Vectores ();
+        
+        System.out.print ("Ingrese el tamanio del arreglo: ");
+        int n = scanner.nextInt();
+        
+        int[] arreglo = new int[n];
+        
+        System.out.print ("Ingrese los numeros para el arreglo: ");
+        for (int i = 0; i < n; i++){
+            arreglo[i] = scanner.nextInt();
+        }
+        
+        vectores.secuenciaLarga(arreglo, n);
+    
     }
 }

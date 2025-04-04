@@ -17,9 +17,9 @@ public class Formulas {
      *  Dos soluciones reales si el discrimiantes es = b2 - 4ac es positivo
      *  Sin soluciones reales si el discriminantre es menor a cero
      *  Validar los parametros recibidos
-     */
+     */    
     
-    public static void formulaCuadratica (double a, double b, double c){
+        public static void formulaCuadratica (double a, double b, double c){
     
         if (a == 0){
             System.out.print ("el coeficiente de A no puede ser 0");
@@ -51,7 +51,7 @@ public class Formulas {
      * Metodo que verifique si un numero es palindromo: Se lee igual de izquierda a derecha y de derecha a izquierda
      */
     
-public static boolean esNumeroPalindromo(int numero) {
+    public static boolean esNumeroPalindromo(int numero) {
         String numStr = Integer.toString(numero);
         String invertido = new StringBuilder(numStr).reverse().toString();
         return numStr.equals(invertido);
@@ -72,7 +72,7 @@ public static boolean esPalabraPalindromo(String palabra) {
      * Un numero vampiro es un numero entero positivo que puede ser factorizado en dos numeros mas pequeños, llamados colmillos, de tal manera que:
      *  los colmillos no pueden terminar ambos en cero
      *  al multiplicar los colmillos el resultado debe ser el numero vampiro
-     *  la concatenacion de los digitos colmillos en cualquier orden, debe coincidir con los digitos del numero vampiro
+     *  la contatenacion de los digitos colmillos en cualquier orden, debe coincidir con los digitos del numero vampiro
      * 
      * Ejemplo:
      *  el numero 1260 es un numero vampiro, porque:
@@ -81,8 +81,9 @@ public static boolean esPalabraPalindromo(String palabra) {
      * 
      * El Programa debe encontrar y mostrar el primer numero vampiro dentro de un rango dado.
      */
+
   public static void encontrarVampiro(int inicio, int fin) {
-        
+    
       for (int numero = inicio; numero <= fin; numero++) {
             
             String numeroString = Integer.toString(numero);
@@ -105,7 +106,7 @@ public static boolean esPalabraPalindromo(String palabra) {
                 if (Arrays.equals(original, combinado)) {
                     System.out.println("Número vampiro encontrado: " + numero + " = " + i + " * " + j);
                     return;
-                }
+}
             }
         }
 
