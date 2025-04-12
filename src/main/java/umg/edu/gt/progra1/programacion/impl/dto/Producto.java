@@ -4,10 +4,7 @@
  */
 package umg.edu.gt.progra1.programacion.impl.dto;
 
-/**
- *
- * @author wcord
- */
+
 public class Producto {
     // atributos
     private String nombre;
@@ -80,5 +77,9 @@ public class Producto {
     // comportamiento (metodos o funciones): agregar, quitar
     public double calcularValorTotal() {
         return precio * cantidad;
+    }
+    
+    public boolean fueraDeInventario (){
+        return estado;
     }
 }

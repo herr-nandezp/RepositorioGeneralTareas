@@ -11,13 +11,19 @@ import umg.edu.gt.progra1.programacion.estructuraDeControl.LoopExample;
 import umg.edu.gt.progra1.programacion.estructuraDeControl.SwitchCaseExample;
 import umg.edu.gt.progra1.programacion.ejercicios.Formulas;
 import umg.edu.gt.progra1.programacion.ejercicios.Vectores;
+import umg.edu.gt.progra1.programacion.impl.Inventario;
 
 
 public class Programacion {
 
     public static void main(String[] args) {
         System.out.println("Hola bienvenido a Progra 1");
-        secuenciaLarga();
+        testInventario();
+    }
+    
+    public static void testInventario (){
+        Inventario inventario = new Inventario ();
+        inventario.inicializarInventario();
     }
     
     

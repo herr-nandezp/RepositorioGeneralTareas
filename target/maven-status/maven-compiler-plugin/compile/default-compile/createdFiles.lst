@@ -2,6 +2,8 @@ umg/edu/gt/progra1/programacion/estructuraDeDatos/Vectores.class
 umg/edu/gt/progra1/programacion/estructuraDeControl/LoopExample.class
 umg/edu/gt/progra1/programacion/estructuraDeControl/IfElseExample.class
 umg/edu/gt/progra1/programacion/Programacion.class
+umg/edu/gt/progra1/programacion/impl/dto/Producto.class
 umg/edu/gt/progra1/programacion/ejercicios/Vectores.class
 umg/edu/gt/progra1/programacion/ejercicios/Formulas.class
+umg/edu/gt/progra1/programacion/impl/Inventario.class
 umg/edu/gt/progra1/programacion/estructuraDeControl/SwitchCaseExample.class

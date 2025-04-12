@@ -25,9 +25,16 @@ public class Inventario {
         
         // Cuantos productos estan fuera de inventario?
         
+        System.out.println("Hay " + calcularFueraInventario(productos) + " productos fuera del inventario");
+        
         // Cuales son los productos disponibles?
         
+        System.out.println("Hay " + calcularInventarioDisponible(productos) + " productos dentro del inventario");
+        
         // Hacer una tabla para mostrar el inventario total
+        
+        mostrarTablaInventario(productos);
+        
         
     }
     
@@ -37,6 +44,40 @@ public class Inventario {
             precioTotal = precioTotal + prod.calcularValorTotal();
         }
         return precioTotal;
+    }
+    
+    
+    private int calcularFueraInventario (Producto[] productos){
+        int contador = 0;
+    for (Producto prod : productos) {
+        if (prod.fueraDeInventario() == false) {
+            contador++;
+        }
+    }
+    return contador;
+    }
+    
+    private int calcularInventarioDisponible (Producto[] productos){
+        int contador = 0;
+    for (Producto prod : productos) {
+        if (prod.fueraDeInventario()) {
+            contador++;
+        }
+    }
+    return contador;
+    }
+    
+    private void mostrarTablaInventario(Producto[] productos) {
+    System.out.printf("%-15s %-10s %-10s %-15s %-15s%n" , "Nombre", "Cantidad", "Precio", "Categoría", "Disponible");
+    System.out.println("--------------------------------------------------------------------------");
+
+        for (Producto prod : productos) {
+            String disponible = prod.fueraDeInventario() ? "Si" : "No";
+            System.out.printf(
+                "%-15s %-10d Q%-9.2f %-15s %-12s%n",
+                prod.getNombre(), prod.getCantidad(), prod.getPrecio(), prod.getTipo(), disponible
+            );
+        }
     }
     
 }
